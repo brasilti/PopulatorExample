@@ -7,6 +7,7 @@ import javax.inject.Inject;
 import br.com.brasilti.project.entities.Imovel;
 import br.com.brasilti.project.entities.Tipo;
 import br.com.brasilti.repository.core.Seeker;
+import br.com.brasilti.repository.exceptions.RepositoryException;
 import br.com.brasilti.repository.propositions.Equals;
 
 public class ReportImoveisPorTipo {
@@ -14,11 +15,8 @@ public class ReportImoveisPorTipo {
 	@Inject
 	private Seeker seeker;
 
-	public List<Imovel> gerarRelatorio(Tipo tipo) {
-		this.seeker.giveme(Imovel.class);
-		this.seeker.whose(new Equals("tipo", tipo));
-
-		return this.seeker.go();
+	public List<Imovel> gerarRelatorio(Tipo tipo) throws RepositoryException {
+		return this.seeker.seekAll(Imovel.class,new Equals("tipo", tipo));
 	}
 
 }

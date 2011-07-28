@@ -11,6 +11,7 @@ import org.junit.Test;
 
 import br.com.brasilti.project.entities.Imovel;
 import br.com.brasilti.project.entities.Tipo;
+import br.com.brasilti.repository.exceptions.RepositoryException;
 import br.com.wave.populator.core.Populator;
 import br.com.wave.populator.exceptions.PopulatorException;
 
@@ -30,7 +31,7 @@ public class ReportImoveisPorTipoTest {
 	}
 
 	@Test
-	public void naoDeveRetornarImoveis() throws PopulatorException {
+	public void naoDeveRetornarImoveis() throws PopulatorException, RepositoryException {
 		Tipo tipo = new Tipo();
 		tipo.setDescricao("Chacara");
 
@@ -43,7 +44,7 @@ public class ReportImoveisPorTipoTest {
 	}
 
 	@Test
-	public void deveRetornarUmImovel() throws PopulatorException {
+	public void deveRetornarUmImovel() throws PopulatorException, RepositoryException {
 		Tipo tipo = new Tipo();
 		tipo.setDescricao("Chacara");
 
