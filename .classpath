@@ -3,10 +3,10 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="test"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/ProjectLib"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/Utils"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/RepositoryJPA"/>
 	<classpathentry combineaccessrules="false" kind="src" path="/Populator"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/Repository"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/PopulatorLib"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

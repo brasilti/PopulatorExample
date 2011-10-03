@@ -59,10 +59,10 @@ public class ReportImoveisPorTipoTest {
 
 	@After
 	public void tearDown() throws PopulatorException {
-		this.populator.clear();
+//		this.populator.clear();
 
-		this.populator = null;
-		this.report = null;
+//		this.populator = null;
+//		this.report = null;
 	}
 
 }
